@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html style="scroll-behavior: smooth;">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<style>
+
+
+
+.active {
+  background-color: blue;
+  color: black
+  ;
+}
+
+.resize {
+    width: 100px;
+    height: auto;
+}
+* {box-sizing: border-box}
+.body {
+  font-family: Verdana, sans-serif; margin:0;
+  padding-top: 5em;
+  width: 100%; 
+}
+img {
+  vertical-align: middle;
+}
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active, .dot:hover {
+  background-color: #717171;
+}
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1s;
+  animation-name: fade;
+  animation-duration: 1s;
+}
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+
+
+
+
+.div{
+      background: white;
+      border-color: gray;
+      border-style: solid;
+      border-width: 1px;
+    text-align: center
+  }
+  .button{
+    background-color: grey;
+  width: auto;
+  border-radius: 5%;
+  border-width: 1px;
+  border-style: solid;
+  color: white;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+align-items: center;  }
+  .h2{
+    text-align: center;
+  }
+  .form{
+    
+      height: auto;
+  width: auto;
+  text-align: center;
+  }
+
+  .parent{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}  
+.child{
+    margin: 10px;
+    height:300px;
+    width:300px;
+
+}
+.child1{
+    align-self: flex-start;
+}
+.child2{
+    align-self: auto;
+}
+.child3{
+    align-self: auto;
+}
+.img{ 
+max-width: 100%;  
+height: auto;  
+}  
+.bdy2{
+  background-color: rgb(182, 238, 221);
+
+  margin-top: auto;
+}
+.h23{
+  text-align: center;
+}
+
+.name {
+  border-collapse: collapse;
+    width:30%;
+    margin-left: 36%;
+}
+.name td, .name th {
+  border: 2px solid ;
+  padding: 8px;
+}
+
+.name th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+}
+
+.h4{
+    text-align: center;
+}
+
+
+
+
+
+
+.submit{
+    background-color: blue;
+    display: flex;
+  width: auto;
+  color: white;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  margin: auto;
+}
+.p1{
+    text-align: center;
+}
+</style>
+<header class="bg-info" style="position: fixed; width:100%; z-index: 1">
+  <div class="row text-white ">
+      <div class="col-md-6 col-9 p-3 pl-5">
+          <img style="  width: 100px;  height: auto;"   src="https://bluesapphire03.github.io/Build.Myweb/buildlogo.png"> </img>
+      </div>
+      <div class="col-md-6 col-3 my-auto ">
+          <nav class="navbar navbar-expand-lg navbar-light ">
+             
+              <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto ">
+                  <li class="nav-item active">
+                    <a class="nav-link text-white" href="#">Home <span class="sr-only"></span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="#register">Register</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link text-white" href="#mentors">Mentors</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link text-white" href="#participate">Participate</a>
+                    </li>
+                </ul>
+              </div>
+            </nav>
+      </div>
+  </div>
+</header>
+</head>
+
+
+
+<body>
+    <div class="body"  id="home" >
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="https://bluesapphire03.github.io/Build.Myweb/carousel.png" alt="First slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="https://bluesapphire03.github.io/Build.Myweb/carousel2.png" alt="Second slide">
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+
+
+<section class="align-item-center" id="register">
+  <br><br>
+    <h2 class="h2">Join us</h2>
+    <br>
+    <p class="p1">pygrammers is a commuinity of python enthuaniss with similar idealogies and interest</p>
+    <form>
+  <input class="submit" type="submit" value="Register">
+    </form>
+    <br><br><br><br><br>
+</section>
+
+
+<section class="div align-item-center" >
+    <h2>Form</h2>
+    <form>
+  <label>Name</label>
+  <br>
+  <input class="form" type="text">
+  <br>
+  <label>Mobile number</label>
+  <br>
+  <input type="number" class="form">
+  <br>
+  <label>Email address</label>
+  <br>
+  <input class="form" type="email">
+  <br>
+  <label>Company/Insitution name</label>
+  <br>
+  <input class="form" type="text">
+  <br>
+  <p>Upload a short video of handwritten sheet showing your interest<br> to join build.mywweb</p>
+  <br>
+  <input class="form" type="file" placeholder="Choose File">
+  <br><br>
+  <select> 
+      <option>Haveyou attended any events by Pygrammers before?!</option>
+    <option>Yes </option>
+    <option>No</option>
+</select>
+
+  <br><br>
+  <input class="button" type="submit" value="Submit form">
+
+    </form>
+  </section>
+<br><br>
+
+
+<section class="bdy2" id="mentors">
+    <h3 class="h23">Mentors</h3>
+    <div class="parent">
+<div class="child child1"><img class="img" src="https://www.syfy.com/sites/syfy/files/2020/07/musk-3.jpg">
+<p>some quick examples text to build on the card title and make up the bulk of the card's content</p>
+</div>
+<div class="child child2"><img class="img" src="https://www.syfy.com/sites/syfy/files/2020/07/musk-3.jpg">
+<p>some quick examples text to build on the card title and make up the bulk of the card's content</p>
+</div>
+<div class="child child3"><img class="img" src="https://www.syfy.com/sites/syfy/files/2020/07/musk-3.jpg">
+<p>some quick examples text to build on the card title and make up the bulk of the card's content</p>
+</div>
+</div>
+<div class="parent">
+    <div class="child child1"><img class="img" src="https://www.syfy.com/sites/syfy/files/2020/07/musk-3.jpg">
+        <p>some quick examples text to build on the card title and make up the bulk of the card's content</p>
+    </div>
+    <div class="child child2"><img class="img" src="https://www.syfy.com/sites/syfy/files/2020/07/musk-3.jpg">
+        <p>some quick examples text to build on the card title and make up the bulk of the card's content</p>
+    </div>
+    <div class="child child3"><img class="img" src="https://www.syfy.com/sites/syfy/files/2020/07/musk-3.jpg">
+        <p>some quick examples text to build on the card title and make up the bulk of the card's content</p>
+    </div>
+    </div>
+</section>
+
+
+<section id="participate" >
+    <h4 class="h4">Paticipant</h4>
+    
+    <table class="name">
+      <tr>
+        <th>SI.No</th>
+        <th>Name</th>
+    
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Alan</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Jijo</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Rahan</td>
+      </tr>
+       <tr>
+        <td>4</td>
+        <td>Akshay</td>
+      </tr>
+       <tr>
+        <td>5</td>
+        <td>Akarsh</td>
+      </tr>
+      
+    </table>
+</section>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
